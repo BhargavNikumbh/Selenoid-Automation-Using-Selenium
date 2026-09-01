@@ -1,0 +1,75 @@
+2026-09-02 00:33:00 INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Testing\Selenium-Selenoid\src\test\resources\testrunners\testng.xml
+
+2026-09-02 00:33:00 INFO  org.orangehrm.factory.DriverFactory - Running tests on environment: null
+2026-09-02 00:33:00 INFO  org.orangehrm.factory.DriverFactory - No env is given ..... hence running it on QA
+2026-09-02 00:33:00 INFO  org.orangehrm.factory.DriverFactory - browser name is: chrome
+2026-09-02 00:33:00 INFO  org.orangehrm.factory.DriverFactory - Running Tests on Local.....
+2026-09-02 00:33:02 INFO  org.orangehrm.pages.LoginPage - Admin:admin123
+2026-09-02 00:36:28 INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Testing\Selenium-Selenoid\src\test\resources\testrunners\testng.xml
+
+2026-09-02 00:36:28 INFO  org.orangehrm.factory.DriverFactory - Running tests on environment: null
+2026-09-02 00:36:28 INFO  org.orangehrm.factory.DriverFactory - No env is given ..... hence running it on QA
+2026-09-02 00:36:28 INFO  org.orangehrm.factory.DriverFactory - browser name is: chrome
+2026-09-02 00:36:28 INFO  org.orangehrm.factory.DriverFactory - Running Tests on Local.....
+2026-09-02 00:36:30 INFO  org.orangehrm.pages.LoginPage - Admin:admin123
+2026-09-02 00:37:48 INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Testing\Selenium-Selenoid\src\test\resources\testrunners\testng.xml
+
+2026-09-02 00:37:48 INFO  org.orangehrm.factory.DriverFactory - Running tests on environment: null
+2026-09-02 00:37:48 INFO  org.orangehrm.factory.DriverFactory - No env is given ..... hence running it on QA
+2026-09-02 00:37:48 INFO  org.orangehrm.factory.DriverFactory - browser name is: chrome
+2026-09-02 00:37:48 INFO  org.orangehrm.factory.DriverFactory - Running Tests on Local.....
+2026-09-02 00:37:50 INFO  org.orangehrm.pages.LoginPage - Admin:admin123
+2026-09-02 00:38:35 INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Testing\Selenium-Selenoid\src\test\resources\testrunners\testng.xml
+
+2026-09-02 00:38:35 INFO  org.orangehrm.factory.DriverFactory - Running tests on environment: null
+2026-09-02 00:38:35 INFO  org.orangehrm.factory.DriverFactory - No env is given ..... hence running it on QA
+2026-09-02 00:38:35 INFO  org.orangehrm.factory.DriverFactory - browser name is: chrome
+2026-09-02 00:38:35 INFO  org.orangehrm.factory.DriverFactory - Running Tests on Local.....
+2026-09-02 00:38:37 INFO  org.orangehrm.pages.LoginPage - Admin:admin123
+2026-09-02 00:39:56 INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Testing\Selenium-Selenoid\src\test\resources\testrunners\testng.xml
+
+2026-09-02 00:39:56 INFO  org.orangehrm.factory.DriverFactory - Running tests on environment: null
+2026-09-02 00:39:56 INFO  org.orangehrm.factory.DriverFactory - No env is given ..... hence running it on QA
+2026-09-02 00:39:56 INFO  org.orangehrm.factory.DriverFactory - browser name is: chrome
+2026-09-02 00:39:56 INFO  org.orangehrm.factory.DriverFactory - Running Tests on Local.....
+2026-09-02 00:39:58 INFO  org.orangehrm.pages.LoginPage - Admin:admin123
+2026-09-02 00:42:31 INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Testing\Selenium-Selenoid\src\test\resources\testrunners\testng.xml
+
+2026-09-02 00:42:31 INFO  org.orangehrm.factory.DriverFactory - Running tests on environment: null
+2026-09-02 00:42:31 INFO  org.orangehrm.factory.DriverFactory - No env is given ..... hence running it on QA
+2026-09-02 00:42:31 INFO  org.orangehrm.factory.DriverFactory - browser name is: chrome
+2026-09-02 00:42:31 INFO  org.orangehrm.factory.DriverFactory - Running Tests on Local.....
+2026-09-02 00:42:33 INFO  org.orangehrm.pages.LoginPage - Admin:admin123
+2026-09-02 00:43:43 INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Testing\Selenium-Selenoid\src\test\resources\testrunners\testng.xml
+
+2026-09-02 00:43:43 INFO  org.orangehrm.factory.DriverFactory - Test Suite started!
+2026-09-02 00:43:43 INFO  org.orangehrm.factory.DriverFactory - Running tests on environment: null
+2026-09-02 00:43:43 INFO  org.orangehrm.factory.DriverFactory - No env is given ..... hence running it on QA
+2026-09-02 00:43:43 INFO  org.orangehrm.factory.DriverFactory - browser name is: chrome
+2026-09-02 00:43:43 INFO  org.orangehrm.factory.DriverFactory - Running Tests on Local.....
+2026-09-02 00:43:45 INFO  org.orangehrm.factory.DriverFactory - loginTest started!
+2026-09-02 00:43:45 INFO  org.orangehrm.pages.LoginPage - Admin:admin123
+2026-09-02 00:43:47 INFO  org.orangehrm.factory.DriverFactory - loginTest passed!
+2026-09-02 00:43:47 INFO  org.orangehrm.factory.DriverFactory - Test Suite is ending!
+2026-09-02 00:43:48 INFO  org.orangehrm.factory.DriverFactory - Extent report generated at: C:\Testing\Selenium-Selenoid\.\reports\TestExecutionReport.html
+2026-09-02 00:47:20 INFO  org.testng.internal.Utils - [TestNG] Running:
+  C:\Testing\Selenium-Selenoid\src\test\resources\testrunners\testng.xml
+
+2026-09-02 00:47:20 INFO  org.orangehrm.factory.DriverFactory - Test Suite started!
+2026-09-02 00:47:20 INFO  org.orangehrm.factory.DriverFactory - Running tests on environment: null
+2026-09-02 00:47:20 INFO  org.orangehrm.factory.DriverFactory - No env is given ..... hence running it on QA
+2026-09-02 00:47:20 INFO  org.orangehrm.factory.DriverFactory - browser name is: chrome
+2026-09-02 00:47:20 INFO  org.orangehrm.factory.DriverFactory - Running Tests on Local.....
+2026-09-02 00:47:22 INFO  org.orangehrm.factory.DriverFactory - loginTest started!
+2026-09-02 00:47:22 INFO  org.orangehrm.pages.LoginPage - Admin:admin123
+2026-09-02 00:47:24 INFO  org.orangehrm.factory.DriverFactory - loginTest passed!
+2026-09-02 00:47:25 INFO  org.orangehrm.factory.DriverFactory - Screenshot captured: C:\Testing\Selenium-Selenoid/screenshot/1788306445059.png
+2026-09-02 00:47:25 INFO  org.orangehrm.factory.DriverFactory - Test Suite is ending!
+2026-09-02 00:47:25 INFO  org.orangehrm.factory.DriverFactory - Extent report generated at: C:\Testing\Selenium-Selenoid\.\reports\TestExecutionReport.html
