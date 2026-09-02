@@ -21,7 +21,7 @@ public class ExtentReportListener implements ITestListener {
     private static final String REPORT_FOLDER = "./reports/";
     private static final String REPORT_FILE = "TestExecutionReport.html";
 
-    private static ExtentReports extent;
+    private static final ExtentReports extent;
     private static final ThreadLocal<ExtentTest> test = new ThreadLocal<>();
 
     /**

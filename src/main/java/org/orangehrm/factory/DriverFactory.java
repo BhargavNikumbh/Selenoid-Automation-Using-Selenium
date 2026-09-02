@@ -36,7 +36,7 @@ public class DriverFactory {
      * this method is used to initialize the driver on the basis of given
      * browsername
      *
-     * @param properties prop
+     * @param Properties prop
      * @return this method will return the webdriver
      */
     public WebDriver init_driver(Properties prop){
