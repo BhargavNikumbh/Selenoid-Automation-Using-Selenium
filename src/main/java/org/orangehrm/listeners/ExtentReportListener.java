@@ -95,10 +95,13 @@ public class ExtentReportListener implements ITestListener {
             try {
                 String screenshotPath = new DriverFactory().getScreenshot();
                 DriverFactory.log.info("Screenshot captured: " + screenshotPath);
+                Path screenshot = Paths.get(screenshotPath);
+                String relativePath = "../screenshot/" + screenshot.getFileName();
+                DriverFactory.log.info("Screenshot relative path: " + relativePath);
                 test.get().pass(
                         "Test passed",
                         MediaEntityBuilder
-                                .createScreenCaptureFromPath(screenshotPath)
+                                .createScreenCaptureFromPath(relativePath)
                                 .build()
                 );
             } catch (Exception e) {
@@ -115,21 +118,16 @@ public class ExtentReportListener implements ITestListener {
     @Override
     public void onTestFailure(ITestResult result) {
 
-        DriverFactory.log.info(
-                result.getMethod().getMethodName() + " failed!"
-        );
-
+        DriverFactory.log.info(result.getMethod().getMethodName() + " failed!");
         if (test.get() != null) {
-
             try {
-
-                String screenshotPath =
-                        new DriverFactory().getScreenshot();
-
+                String screenshotPath = new DriverFactory().getScreenshot();
+                Path screenshot = Paths.get(screenshotPath);
+                String relativePath = "../screenshot/" + screenshot.getFileName();
                 test.get().fail(
                         result.getThrowable(),
                         MediaEntityBuilder
-                                .createScreenCaptureFromPath(screenshotPath)
+                                .createScreenCaptureFromPath(relativePath)
                                 .build()
                 );
 
@@ -151,35 +149,24 @@ public class ExtentReportListener implements ITestListener {
 
     @Override
     public void onTestSkipped(ITestResult result) {
-
-        DriverFactory.log.info(
-                result.getMethod().getMethodName() + " skipped!"
-        );
-
+        DriverFactory.log.info(result.getMethod().getMethodName() + " skipped!");
         if (test.get() != null) {
-
             try {
-
                 String screenshotPath =
                         new DriverFactory().getScreenshot();
-
+                Path screenshot = Paths.get(screenshotPath);
+                String relativePath = "../screenshot/" + screenshot.getFileName();
                 test.get().skip(
                         result.getThrowable(),
                         MediaEntityBuilder
-                                .createScreenCaptureFromPath(screenshotPath)
+                                .createScreenCaptureFromPath(relativePath)
                                 .build()
                 );
 
             } catch (Exception e) {
-
                 test.get().skip(result.getThrowable());
-
-                DriverFactory.log.error(
-                        "Unable to attach screenshot",
-                        e
-                );
+                DriverFactory.log.error("Unable to attach screenshot", e);
             }
-
             test.get()
                     .getModel()
                     .setEndTime(getTime(result.getEndMillis()));
