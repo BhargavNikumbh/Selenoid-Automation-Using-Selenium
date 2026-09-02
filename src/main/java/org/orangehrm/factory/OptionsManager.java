@@ -3,6 +3,7 @@ package org.orangehrm.factory;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
 
+import java.util.Map;
 import java.util.Properties;
 
 public class OptionsManager {
@@ -17,8 +18,17 @@ public class OptionsManager {
         co = new ChromeOptions();
 
         if(Boolean.parseBoolean(prop.getProperty("remote"))){
-            co.setCapability("enableVNC", true);
-            co.setBrowserVersion(prop.getProperty("browserversion"));
+//            co.setCapability("enableVNC", true);
+            co.setCapability("selenoid:options", Map.of(
+                    "enableVNC", true
+            ));
+//            co.setBrowserVersion(prop.getProperty("browserversion"));
+            String browserVersion = prop.getProperty("browserversion");
+
+            if (browserVersion != null && !browserVersion.trim().isEmpty()) {
+                co.setBrowserVersion(browserVersion.trim());
+            }
+
         }
         if (Boolean.parseBoolean(prop.getProperty("headless")))
             co.addArguments("--headless=new");

@@ -15,7 +15,7 @@
 
     <test name="Login Test">
         <parameter name="browser" value="chrome" />
-        <parameter name="browserversion" value="152.0" />
+        <parameter name="browserversion" value="128.0" />
         <classes>
             <class name="com.tests.orangehrm.tests.LoginTests"/>
         </classes>

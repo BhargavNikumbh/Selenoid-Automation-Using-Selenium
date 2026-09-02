@@ -3,7 +3,6 @@ package org.orangehrm.factory;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WindowType;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -20,6 +19,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URI;
 import java.net.URL;
 import java.util.Properties;
 
@@ -30,19 +30,19 @@ public class DriverFactory {
     OptionsManager optionsManager;
     public static ThreadLocal<WebDriver> tlDriver = new ThreadLocal<>();
 
-    public static Logger log = LoggerFactory.getLogger(DriverFactory.class);
+    public static final Logger log = LoggerFactory.getLogger(DriverFactory.class);
 
     /**
      * this method is used to initialize the driver on the basis of given
      * browsername
      *
-     * @param properties prop
+     * @param Properties prop
      * @return this method will return the webdriver
      */
     public WebDriver init_driver(Properties prop){
         this.prop = prop;
         String browserName = prop.getProperty("browser").trim();
-        log.info("browser name is: "+browserName);
+        log.info("browser name is: {}",browserName);
 
         optionsManager = new OptionsManager(prop);
 
@@ -70,14 +70,12 @@ public class DriverFactory {
         }
 
         else {
-            System.out.println("please pass the right browser name... " + browserName);
+            log.error("please pass the right browser name: {}" , browserName);
             throw new FrameworkException("no browser found...");
         }
         // Common browser setup
         getDriver().manage().deleteAllCookies();
         getDriver().manage().window().maximize();
-
-        getDriver().switchTo().newWindow(WindowType.TAB);
         getDriver().get(prop.getProperty("url"));
 
         return getDriver();
@@ -120,7 +118,7 @@ public class DriverFactory {
         // mvn clean install -Denv="qa"
 
         String envName = System.getProperty("env");
-        log.info("Running tests on environment: " + envName);
+        log.info("Running tests on environment: {}" , envName);
 
         if (envName == null) {
             log.info("No env is given ..... hence running it on QA");
@@ -152,8 +150,8 @@ public class DriverFactory {
                         break;
 
                     default:
-                        System.out.println("please pass the right environment value..." + envName);
-                        log.error("please pass the right environment value..." + envName);
+
+                        log.error("please pass the right environment value {}" , envName);
                         throw new FrameworkException("no env found...");
                 }
             } catch (FileNotFoundException e) {
