@@ -1,22 +1,35 @@
+# =========================
 # Maven
+# =========================
 target/
 !.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
 
+# Maven Wrapper
+.mvn/wrapper/maven-wrapper.properties
+
+# =========================
 # Test execution output
+# =========================
 logs/
 reports/
 screenshot/
+test-output/
+allure-results/
+allure-report/
 
+# =========================
 # IntelliJ IDEA
+# =========================
 .idea/
 *.iws
 *.iml
 *.ipr
+out/
 
+# =========================
 # Eclipse
-.apt_generated
+# =========================
+.apt_generated/
 .classpath
 .factorypath
 .project
@@ -24,16 +37,33 @@ screenshot/
 .springBeans
 .sts4-cache
 
+# =========================
 # NetBeans
+# =========================
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
 
+# =========================
 # VS Code
+# =========================
 .vscode/
 
-# Mac OS
+# =========================
+# OS generated files
+# =========================
 .DS_Store
+Thumbs.db
+Desktop.ini
+
+# =========================
+# Java
+# =========================
+*.class
+
+# =========================
+# Logs
+# =========================
+*.log
