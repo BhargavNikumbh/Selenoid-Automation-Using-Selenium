@@ -33,6 +33,13 @@ public class OptionsManager {
 
         if (Boolean.parseBoolean(prop.getProperty("incognito")))
             co.addArguments("--incognito");
+
+        if (System.getProperty("os.name").toLowerCase().contains("linux")) {
+            co.addArguments("--headless=new");
+            co.addArguments("--no-sandbox");
+            co.addArguments("--disable-dev-shm-usage");
+            co.addArguments("--window-size=1920,1080");
+        }
         return co;
     }
 
