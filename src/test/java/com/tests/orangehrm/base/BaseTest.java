@@ -61,39 +61,37 @@ public class BaseTest {
     }
 
     @AfterTest
-    public void tearDown() throws InterruptedException {
+    public void tearDown() {
         driver.close();
-//        driver.switchTo().window(prop.getProperty("tcstudioid"));
-//        Thread.sleep(3000);
         driver.quit();
     }
 
-//    @AfterSuite
-//    public void saveTestReport() {
-//
-//        String sourcePath = "build/TestExecutionReport.html";
-//        String destinationPath = "reports/TestExecutionReport.html";
-//
-//        try {
-//            File sourceFile = new File(sourcePath);
-//            File destinationFile = new File(destinationPath);
-//
-//            // Create reports directory if it doesn't exist
-//            FileUtils.forceMkdirParent(destinationFile);
-//
-//            // Copy report
-//            FileUtils.copyFile(sourceFile, destinationFile);
-//
-//            System.out.println("======================================");
-//            System.out.println("Test Execution Report:");
-//            System.out.println(destinationFile.getAbsolutePath());
-//            System.out.println("======================================");
-//
-//        } catch (IOException e) {
-//            System.err.println("Failed to save test execution report");
-//            e.printStackTrace();
-//        }
-//    }
+    @AfterSuite
+    public void saveTestReport() {
+
+        String sourcePath = "build/TestExecutionReport.html";
+        String destinationPath = "reports/TestExecutionReport.html";
+
+        try {
+            File sourceFile = new File(sourcePath);
+            File destinationFile = new File(destinationPath);
+
+            // Create reports directory if it doesn't exist
+            FileUtils.forceMkdirParent(destinationFile);
+
+            // Copy report
+            FileUtils.copyFile(sourceFile, destinationFile);
+
+            System.out.println("======================================");
+            System.out.println("Test Execution Report:");
+            System.out.println(destinationFile.getAbsolutePath());
+            System.out.println("======================================");
+
+        } catch (IOException e) {
+            System.err.println("Failed to save test execution report");
+            e.printStackTrace();
+        }
+    }
 
 
 //    @AfterSuite

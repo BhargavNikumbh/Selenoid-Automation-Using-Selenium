@@ -18,11 +18,9 @@ public class OptionsManager {
         co = new ChromeOptions();
 
         if(Boolean.parseBoolean(prop.getProperty("remote"))){
-//            co.setCapability("enableVNC", true);
             co.setCapability("selenoid:options", Map.of(
                     "enableVNC", true
             ));
-//            co.setBrowserVersion(prop.getProperty("browserversion"));
             String browserVersion = prop.getProperty("browserversion");
 
             if (browserVersion != null && !browserVersion.trim().isEmpty()) {

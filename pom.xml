@@ -24,6 +24,14 @@
             <version>2.0.16</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.48</version>
+            <scope>provided</scope>
+        </dependency>
+
+
         <!-- Log4j 2 implementation -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
@@ -62,6 +70,7 @@
             <artifactId>commons-io</artifactId>
             <version>2.20.0</version>
         </dependency>
+
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-java-sdk-s3</artifactId>
